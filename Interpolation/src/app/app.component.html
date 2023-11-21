@@ -1,0 +1,15 @@
+
+<div><h1> {{ 'First Name : '+ FirstName + ', Last Name : ' + LastName }}</h1></div>
+  <div *ngFor="let person of people">
+    <h1>{{ person.FirstName + ' ' + person.LastName }}</h1>
+  </div>
+  <div>
+<h1> 10 + 5 * 7 - 6 = {{ 10 + 5 * 7 -6 }} </h1></div>
+<div><h1> Address : {{ Address ? Address : 'Not Available' }} </h1>                 
+</div>
+<div>
+ <h1> Full Name : {{ GetFullName() }} </h1>                 
+ </div>
+ <div>
+  <img src = {{ImagePath}} /></div>
+<router-outlet></router-outlet>
