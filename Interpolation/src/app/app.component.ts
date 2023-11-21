@@ -11,9 +11,9 @@ export class AppComponent {
   LastName: string = 'ArulKumar';//hard coded string
  
     people = [
-      { FirstName: 'Vishal', LastName: 'Mohanty' },
+      { FirstName: 'Vishal', LastName: 'vishnu' },
       {FirstName:  'Anurag',
-      LastName:'Mohanty'},
+      LastName:'Mohan'},
       {FirstName:  'Karthik',
       LastName:'Arulkumar'}
     ]
