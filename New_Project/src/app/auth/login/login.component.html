@@ -1,4 +1,4 @@
-<div class="login-container">
+<!-- <div class="login-container">
     <h2>Login</h2>
     <form (submit)="login()">
       <label for="username">Username:</label>
@@ -9,5 +9,26 @@
   
       <button type="submit">Login</button>
     </form>
+  </div> -->
+  <div class="login-container">
+    <h2 style="font-weight:bold;">Login</h2>
+    <label>Access to our dashboard</label>
+    <form class="login-form">
+      <div class="form-group2">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group1">
+       <span> <label for="password" style="margin-left: -10px;">Password:</label>&nbsp;<label style="margin-left: 200px;">Forgot Password?</label></span>
+      </div>
+      <div  class="form-group" >
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" routerLink="/Dashboard">Login</button>
+      </div>
+      <div class="form-group">
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </form>
   </div>
-  
