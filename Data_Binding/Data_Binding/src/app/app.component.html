@@ -1,5 +1,6 @@
+<h1>TYPES OF BINDING</h1>
 <div>
-  <H1><span [innerHTML] = 'Title' ></span>  </H1> 
+  <H2><span [innerHTML] = 'Title' ></span>  </H2> 
 </div><br>
 <div>
   <button [disabled] = 'IsDisabledClick' > Cick Here </button>              
@@ -9,11 +10,11 @@
   <img [src] = 'ImagePath' />                
 </div><br>
 <!-- <button disabled = {{IsDisabledClick1}} > Cick Here </button>  -->
-<H1>INTERPOLATION BINDING</H1>
+<H2>INTERPOLATION BINDING</H2>
 <div>
 {{MaliciousData}} 
-</div>   <br><br><br><br>
-<H1>ATTRIBUTE BINDING</H1>
+</div>   <br><br>
+<H2>ATTRIBUTE BINDING</H2>
 <table>
   <thead>
       <tr>
@@ -48,15 +49,19 @@
           <td>{{Age}}</td>
       </tr>
   </tbody>
-</table>
+</table><br>
 
-<h1>CLASS BINDING</h1>
+<h2>CLASS BINDING</h2>
 <div>
   <button [class] = 'ClassesToApply' >Click Me</button>
   <button class='colorClass' [class] = 'ClassesToApply1'>CLICK ME</button>
 </div>
 <div>
   <button class='colorClass' [ngClass]='AddCSSClasses()'>Click Me</button>
+</div><br>
+<h2>STYLE BINDING</h2>
+<div>
+  <button style='color:red' [ngStyle]="AddCSSStyles()">Click Me </button>
 </div>
 
 <router-outlet></router-outlet>

@@ -22,16 +22,29 @@ export class AppComponent {
      MaliciousData : string = "Hello ('your application is hacked')";
      ClassesToApply : string = 'italicClass boldClass';
      ClassesToApply1 : string = 'italicClass boldClass';
+     ApplyBoldClass: boolean = true;
+     ApplyItalicsClass: boolean = true;
+     IsBold: boolean = true;
+     FontSize: number = 40;
+     IsItalic: boolean = true;
     
-   
-      ApplyBoldClass: boolean = true;
-      ApplyItalicsClass: boolean = true;
       AddCSSClasses() {
       let Cssclasses = {
       boldClass: this.ApplyBoldClass,
       italicsClass: this.ApplyItalicsClass
       };
       return Cssclasses;
+      
+      }
+    
+      AddCSSStyles() {
+          let CssStyles = {
+              'font-weight': this.IsBold ? 'bold' : 'normal',
+              'font-style': this.IsItalic ? 'italic' : 'normal',
+              'font-size.px': this.FontSize
+          };
+  
+          return CssStyles;
       }
       
   }
