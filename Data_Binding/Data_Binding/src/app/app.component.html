@@ -1,0 +1,62 @@
+<div>
+  <H1><span [innerHTML] = 'Title' ></span>  </H1> 
+</div><br>
+<div>
+  <button [disabled] = 'IsDisabledClick' > Cick Here </button>              
+</div><br>
+
+<div>
+  <img [src] = 'ImagePath' />                
+</div><br>
+<!-- <button disabled = {{IsDisabledClick1}} > Cick Here </button>  -->
+<H1>INTERPOLATION BINDING</H1>
+<div>
+{{MaliciousData}} 
+</div>   <br><br><br><br>
+<H1>ATTRIBUTE BINDING</H1>
+<table>
+  <thead>
+      <tr>
+          <th colspan="2">
+              {{pageHeader}}
+          </th>
+      </tr><br>
+  </thead>
+  <tbody>
+      <tr>
+          <td>First Name:</td>
+          <td>{{FirstName}}</td>
+      </tr>
+      <tr>
+          <td>Last Name:</td>
+          <td>{{LastName}}</td>
+      </tr>
+      <tr>
+          <td>Branch:</td>
+          <td>{{Branch}}</td>
+      </tr>
+      <tr>
+          <td>Mobile:</td>
+          <td>{{Mobile}}</td>
+      </tr>
+      <tr>
+          <td>Gender:</td>
+          <td>{{Gender}}</td>
+      </tr>
+      <tr>
+          <td>Age:</td>
+          <td>{{Age}}</td>
+      </tr>
+  </tbody>
+</table>
+
+<h1>CLASS BINDING</h1>
+<div>
+  <button [class] = 'ClassesToApply' >Click Me</button>
+  <button class='colorClass' [class] = 'ClassesToApply1'>CLICK ME</button>
+</div>
+<div>
+  <button class='colorClass' [ngClass]='AddCSSClasses()'>Click Me</button>
+</div>
+
+<router-outlet></router-outlet>
