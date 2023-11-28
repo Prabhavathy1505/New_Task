@@ -1,0 +1,8 @@
+<h2>Book List</h2>
+    <app-nest-component
+      [categories]="bookCategories"
+      (filterChanged)="onFilterChange($event)"
+    ></app-nest-component>
+    <ul>
+      <li *ngFor="let book of filteredBooks">{{ book.title }}</li>
+    </ul>
