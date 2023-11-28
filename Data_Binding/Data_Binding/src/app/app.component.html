@@ -1,4 +1,7 @@
 <h1>TYPES OF BINDING</h1>
+
+<!-- properperty binding -->
+
 <div>
   <H2><span [innerHTML] = 'Title' ></span>  </H2> 
 </div><br>
@@ -9,11 +12,16 @@
 <div>
   <img [src] = 'ImagePath' />                
 </div><br>
-<!-- <button disabled = {{IsDisabledClick1}} > Cick Here </button>  -->
+
+<!-- INTERPOLATION BINDING -->
+
 <H2>INTERPOLATION BINDING</H2>
 <div>
 {{MaliciousData}} 
 </div>   <br><br>
+
+<!-- ATTRIBUTE BINDING -->
+
 <H2>ATTRIBUTE BINDING</H2>
 <table>
   <thead>
@@ -51,6 +59,8 @@
   </tbody>
 </table><br>
 
+<!-- CLASS BINDING -->
+
 <h2>CLASS BINDING</h2>
 <div>
   <button [class] = 'ClassesToApply' >Click Me</button>
@@ -59,9 +69,26 @@
 <div>
   <button class='colorClass' [ngClass]='AddCSSClasses()'>Click Me</button>
 </div><br>
+
+<!-- STYLE BINDING -->
+
 <h2>STYLE BINDING</h2>
 <div>
   <button style='color:red' [ngStyle]="AddCSSStyles()">Click Me </button>
-</div>
+</div><br><br><br>
+
+<!-- Event Binding -->
+
+<button (click)="onClick()">Click me</button><br><br>
+<input type="text" (input)="onInputChange($event)" /><br><br>
+<button (mouseover)="onMouseOver()">Hover me</button><br><br>
+<input type="text" (keydown)="onKeyPress($event)" /><br><br>
+
+ <!-- form content -->
+
+<form (submit)="onFormSubmit($event)">
+ 
+  <button type="submit">Submit</button>
+</form>
 
 <router-outlet></router-outlet>

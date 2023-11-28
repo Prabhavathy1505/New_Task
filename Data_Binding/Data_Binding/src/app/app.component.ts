@@ -47,5 +47,30 @@ export class AppComponent {
           return CssStyles;
       }
       
+  onClick() {
+    console.log('Button clicked!');
+ 
+}
+
+  onInputChange(event: any) {
+    console.log('Input changed:', event.target.value);
+    
+}
+
+  onMouseOver() {
+    console.log('Mouse over the element!');
+   
+}
+onKeyPress(event: any) {
+  console.log('Key pressed:', event.key);
+ 
+}
+
+  onFormSubmit(event: any) {
+    event.preventDefault();
+    console.log('Form submitted!');
+  
+}
+      
   }
 
