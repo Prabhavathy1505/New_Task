@@ -71,6 +71,7 @@ onKeyPress(event: any) {
     console.log('Form submitted!');
   
 }
+fullName: string = "Hello World";    
       
   }
 
