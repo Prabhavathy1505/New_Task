@@ -72,6 +72,6 @@ onKeyPress(event: any) {
   
 }
 fullName: string = "Hello World";    
-      
+buttonColor: string = 'green';    
   }
 
