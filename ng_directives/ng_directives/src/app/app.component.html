@@ -1,0 +1,10 @@
+<!-- product.component.html -->
+
+<div *ngFor="let product of products; let odd = odd; let even = even; let i = index; trackBy: trackByFn"
+     [ngClass]="{'odd': odd, 'even': even}">
+  <h3>{{ i + 1 }}. {{ product.name }}</h3>
+  <p>Type: {{ product.type }}</p>
+</div>
+
+
+<router-outlet></router-outlet>
