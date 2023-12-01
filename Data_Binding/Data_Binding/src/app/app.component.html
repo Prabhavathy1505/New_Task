@@ -78,7 +78,7 @@
 </div><br><br><br>
 
 <!-- Event Binding -->
-<H2>Event Binding</H2>
+<H2>EVENT BINDING</H2>
 
 <button (click)="onClick()">Click me</button><br><br>
 <input type="text" (input)="onInputChange($event)" /><br><br>
@@ -94,8 +94,9 @@
 
 <!-- Two-way Binding Example -->
 
-<h2>Two-way Binding Example</h2> <br/>  
+<h2 >TWO WAY DATA BINDING</h2> <br/>  
    <input [(ngModel)]="fullName" />    
 <p> {{fullName}} </p>  
-
+<input type="text" [(ngModel)]="userName" ><br/><br/>
+    {{userName}}
 <router-outlet></router-outlet>

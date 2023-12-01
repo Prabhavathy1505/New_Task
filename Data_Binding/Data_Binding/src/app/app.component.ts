@@ -27,7 +27,7 @@ export class AppComponent {
      IsBold: boolean = true;
      FontSize: number = 40;
      IsItalic: boolean = true;
-    
+     private _userName: string = "Bill Gates";
       AddCSSClasses() {
       let Cssclasses = {
       boldClass: this.ApplyBoldClass,
@@ -73,5 +73,17 @@ onKeyPress(event: any) {
 }
 fullName: string = "Hello World";    
 buttonColor: string = 'green';    
-  }
+// Two-way Binding Example
 
+get userName(): string {
+  return this._userName;
+}
+set userName(val: string) {
+ 
+  this._userName = val;
+}
+// ngOnInit(): void {
+// }
+//   }
+
+}
