@@ -1,10 +1,40 @@
 <!-- product.component.html -->
-
+<h2>ngFor TrackBy and ngClass</h2><br>
 <div *ngFor="let product of products; let odd = odd; let even = even; let i = index; trackBy: trackByFn"
      [ngClass]="{'odd': odd, 'even': even}">
   <h3>{{ i + 1 }}. {{ product.name }}</h3>
   <p>Type: {{ product.type }}</p>
+</div><br>
+
+<h2>ngIf and ngSwitch</h2><br>
+<div *ngIf="isLoggedIn; else notLoggedIn">
+  <h1>Welcome, User!</h1>
+  <button (click)="logout()">Logout</button>
 </div>
+<ng-template #notLoggedIn>
+  <h1>Please Log In</h1>
+  <button (click)="login()">Login</button>
+</ng-template>
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'">Red color is selected</p>
+  <p *ngSwitchCase="'blue'">Blue color is selected</p>
+  <p *ngSwitchCase="'green'">Green color is selected</p>
+  <p *ngSwitchDefault>Choose a color</p>
+</div>
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+  <option value="select">select</option>
+</select><br><br><br>
+
+<h2>ngStyle</h2><br>
+<div [ngStyle]="{'font-size': fontSize + 'px', 'color': fontColor}">
+  This text is styled dynamically.
+</div><br>
+<button (click)="increaseFontSize()">Increase Font Size</button>
+`
 
 
 <router-outlet></router-outlet>

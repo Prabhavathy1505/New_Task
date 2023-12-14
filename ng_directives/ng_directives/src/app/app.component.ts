@@ -19,4 +19,22 @@ export class AppComponent {
   trackByFn(index: number, product: any): number {
     return product.id;
   }
-}
+  isLoggedIn: boolean = false;
+
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
+
+    color: string = 'select';
+    
+    fontSize: number = 16;
+    fontColor: string = 'black';
+  
+    increaseFontSize() {
+      this.fontSize += 2;
+    }
+  }
