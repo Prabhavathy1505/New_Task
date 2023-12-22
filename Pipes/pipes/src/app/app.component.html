@@ -1,0 +1,60 @@
+
+<h1>Built-in Pipes</h1>
+<table border="1">
+  <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>CourseFee</th>            
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let student of students'>
+          <td>{{student.ID | uppercase}}</td>
+          <td>{{student.Name | titlecase}}</td>
+          <td>{{student.DOB | date:'dd/MM/yyyy'}}</td>
+          <td>{{student.Gender | lowercase}}</td>
+          <td>{{student.CourseFee | currency:'USD':true}}</td>
+      </tr>
+  </tbody>
+</table>
+<h1> Parameterized Pipes</h1>
+
+<!-- parameterized pipes -->
+
+<p>Date Pipe : {{today | date}}</p>
+<p>Full Date : {{today | date:'fullDate'}}</p>
+<p>Mediate Date : {{today | date:'medium'}}</p>
+<p>Short Date : {{today | date:'short'}}</p>
+<p>Date (dd/MM/yyyy) : {{today | date:'dd/MM/yyyy'}}</p>
+<p>Time : {{today | date:'h:mm a z'}}</p>
+<p>Medium Time : {{today | date:'mediumTime'}}</p>
+
+
+<h1>Custom Pipes</h1>
+<!-- Custom Pipes -->
+
+<table border="1">
+  <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>CourseFee</th>            
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let student of students'>
+          <td>{{student.ID | uppercase}}</td>
+          <td>{{student.Name | mypipe:student.Gender}}</td>
+          <td>{{student.DOB | date:'dd/MM/yyyy'}}</td>
+          <td>{{student.Gender | lowercase}}</td>
+          <td>{{student.CourseFee | currency:'USD':true}}</td>
+      </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
